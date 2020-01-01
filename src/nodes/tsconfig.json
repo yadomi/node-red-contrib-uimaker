@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "target": "ES2015",
+        "forceConsistentCasingInFileNames": true,
+        "isolatedModules": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+    }
+}

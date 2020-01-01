@@ -1,0 +1,31 @@
+<script type="text/javascript">
+  RED.nodes.registerType('uimaker-input', {
+    category: 'ui',
+    color: '#a6bbcf',
+    inputs: 1,
+    outputs: 1,
+    defaults: {
+      server: { value: null, type: 'uimaker-config' },
+      identifier: { value: 'uimaker-input' },
+      name: { value: null }
+    },
+    label: function () {
+      return this.name || 'uimaker-input'
+    }
+  })
+</script>
+
+<script type="text/x-red" data-template-name="uimaker-input">
+  <div class="form-row">
+      <label for="node-input-server"><i class="icon-tag"></i>Server</label>
+      <input type="text" id="node-input-server" placeholder="Server">
+  </div>
+  <div class="form-row">
+      <label for="node-input-name"><i class="icon-tag"></i>Name</label>
+      <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+  <div class="form-row">
+      <label for="node-input-identifier"><i class="icon-tag"></i>Identifier</label>
+      <input type="text" id="node-input-identifier" placeholder="Identifier">
+  </div>
+</script>

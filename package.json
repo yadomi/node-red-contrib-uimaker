@@ -1,0 +1,35 @@
+{
+  "name": "node-red-contrib-uimaker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev:nodes": "tsc -w -p src/nodes",
+    "dev:client": "webpack --mode development --watch --config src/client/webpack.config.js"
+  },
+  "node-red": {
+    "nodes": {
+      "uimaker-input": "src/nodes/uimaker-input/uimaker-input.js",
+      "uimaker-output": "src/nodes/uimaker-output/uimaker-output.js",
+      "uimaker-config": "src/nodes/uimaker-config/uimaker-config.js"
+    }
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/node": "^13.1.2",
+    "@types/node-red": "^0.20.1",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "express-sse": "^0.5.1",
+    "node-red": "^1.0.3",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.4",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "@toverux/expresse": "^2.4.0"
+  }
+}

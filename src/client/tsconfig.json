@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "lib": [
+            "DOM"
+        ],
+        "forceConsistentCasingInFileNames": true,
+        "allowSyntheticDefaultImports": true,
+        "module": "esnext",
+        "outDir": "../../public/lib/",
+        "jsx": "react"
+    },
+}
