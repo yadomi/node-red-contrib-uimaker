@@ -17,9 +17,10 @@ function useNode(node: ReturnType<typeof createNode>) {
     return [value, node.dispatch];
 }
 
-const node = createNode("uimaker-input");
+const node1 = createNode("uimaker1");
+const node2 = createNode("uimaker2");
 
-const A = () => {
+const A = ({ node }) => {
     const [value, dispatch] = useNode(node);
     const onClick = () => {
         dispatch(new Date().getTime());
@@ -31,5 +32,5 @@ const A = () => {
     </div>
 }
 
-ReactDOM.render(<A />, document.getElementById("root")
+ReactDOM.render(<><A node={node1} /><A node={node2} /></>, document.getElementById("root")
 );

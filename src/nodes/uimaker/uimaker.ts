@@ -34,5 +34,5 @@ const node = (RED: Red) => function (config: Properties) {
 }
 
 module.exports = (RED: Red) => {
-  RED.nodes.registerType('uimaker-input', node(RED))
+  RED.nodes.registerType('uimaker', node(RED))
 }
