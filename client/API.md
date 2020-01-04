@@ -94,7 +94,7 @@ function useNode (
 ): [any, (value: string | number | boolean) => Promise<Response>]
 ```
 
-- `node`: A node instance create by [`createNode`](#create-node-returned-by-configure)
+- `node`: A node instance create by [`createNode`](#createnode-returned-by-configure)
 
 #### Example
 
@@ -102,13 +102,12 @@ function useNode (
 import { useNode } from 'uimaker-client/react'
 
 const MyComponent = () => {
-const [value, dispatch] = useNode(MyNode1);
+    const [value, dispatch] = useNode(MyNode1);
 
     const onClick = () => dispatch(new Date().getTime());
 
     return <div>
         Value: {value} - <button onClick={onClick}>Update<button>
     </div>
-
 }
 ```

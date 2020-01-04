@@ -22,11 +22,12 @@ This is the repostory for `uimaker` for Node-RED. It's composed of two package:
 
   - [Introduction](./client#uimaker-client)
   - [API](./client/API.md)
+    - [Usage with vanilla](./client#directly)
+    - [Usage with React](./client#with-react)
 
 ## What's missing ?
 
 - Tests
-- Typescript types definition in the package for the client
-- Better examples
-- Improve security
+- Generate TS definition
+- Generate a documention with TypeDoc
 - ???

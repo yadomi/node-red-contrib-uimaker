@@ -5,7 +5,7 @@ This is the frontend library to use in conjonction with [`node-red-contrib-uimak
 ## Installation
 
 ```
-yarn add contrib-uimaker
+yarn add uimaker-client
 ```
 
 ## Usage
