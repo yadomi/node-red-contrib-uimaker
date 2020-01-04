@@ -1,7 +1,8 @@
 <script type="text/javascript">
   RED.nodes.registerType('uimaker', {
     category: 'ui',
-    color: '#a6bbcf',
+    color: '#f8a5c2',
+    icon: 'font-awesome/fa-bars',
     inputs: 1,
     outputs: 1,
     defaults: {
@@ -11,7 +12,9 @@
     },
     label: function () {
       return this.name || 'uimaker'
-    }
+    },
+    inputLabels: 'Input',
+    outputLabels: 'Output'
   })
 </script>
 
@@ -28,4 +31,42 @@
       <label for="node-input-identifier"><i class="icon-tag"></i>Identifier</label>
       <input type="text" id="node-input-identifier" placeholder="Identifier">
   </div>
+</script>
+
+<script type="text/x-red" data-help-name="uimaker">
+    <p>Create a node to comunicate either from or to a dashboard page.</p>
+
+    <h3>Input</h3>
+      <dl class="message-properties">
+          <dt>payload
+              <span class="property-type">string | number | boolean</span>
+          </dt>
+          <dd> the payload of the message to send to the dashboard.</dd>
+      </dl>
+
+  <h3>Output</h3>
+      <dl class="message-properties">
+          <dt>payload
+              <span class="property-type">string | number | boolean</span>
+          </dt>
+          <dd> a message received from the dashboard page.</dd>
+      </dl>
+
+    <h3>Details</h3>
+    <p>The UIMaker block will send a message to the dashboard page when a message is send to the input node. It will also emit a message to the output node when a message is received from the dashboard page.
+    </p>
+
+    <p><code>msg.payload</code> is used as the payload of the input message.</p>
+
+    <p><strong>Note:</strong> There is no continuity between input and output. You can use the block as input only, output only or both.</p>
+
+    <p>
+      The <code>identifier</code> act as topic or channel and will only send or receive a message from the dashboard that match the identifier.
+    </p>
+
+    <h3>References</h3>
+    <ul>
+        <li><a>node-red-contrib-uimaker-client</a> - The client package to use with the node to create a dashboard page</li>
+        <li><a>GitHub</a> - this node github repository</li>
+    </ul>
 </script>
