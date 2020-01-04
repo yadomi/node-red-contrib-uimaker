@@ -43,7 +43,7 @@ export const configure = (host: string) => (nodeId: string): Node => {
         payload: value
       }
 
-      return fetch('/uimaker-input', {
+      return fetch(new URL('/uimaker-input', host).href, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
