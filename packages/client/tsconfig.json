@@ -4,10 +4,12 @@
         "lib": [
             "DOM"
         ],
+        "declaration": true,
+        "moduleResolution": "node",
         "forceConsistentCasingInFileNames": true,
         "allowSyntheticDefaultImports": true,
         "module": "esnext",
-        "outDir": "../../public/lib/",
-        "jsx": "react"
-    },
+        "jsx": "react",
+        "outDir": "./dist/",
+    }
 }
