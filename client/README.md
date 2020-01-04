@@ -47,4 +47,4 @@ const MyComponent = () => {
 }
 ```
 
-## [Documentation](./docs)
+## [Documentation](./API.md)
