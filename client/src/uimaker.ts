@@ -5,59 +5,82 @@ export interface Node {
   ) => () => void
 }
 
-export const configure = (host: string) => (nodeId: string): Node => {
-  const es = new EventSource(new URL('/uimaker-stream', host).href)
-  let listeners: Function[] = []
+type createNode = (identifier: string) => Node
 
-  es.onerror = err => console.log({ err })
+/**
+ *
+ * @param host The Node-Red server host from where your nodes are configured. (eg: `http://127.0.0.1:1880`)
+ */
+export const configure = (host: string): createNode => {
+  /**
+   *
+   * @param identifier The identifier of the node.
+   * Must be the same as configured in Node-RED node in order to receive or dispatch as this act as a topic/channel.
+   */
+  function createNode (identifier) {
+    const es = new EventSource(new URL('/uimaker-stream', host).href)
+    let listeners: Function[] = []
 
-  const update = value => {
-    listeners.forEach(listener => {
-      listener(value)
-    })
-  }
+    es.onerror = err => console.log({ err })
 
-  es.addEventListener('init', event => {
-    if (!(event instanceof MessageEvent)) return
-
-    const data = JSON.parse(event.data)
-    if (data[nodeId]) {
-      update(data[nodeId])
-    }
-  })
-
-  es.addEventListener('update', event => {
-    if (!(event instanceof MessageEvent)) return
-
-    const data = JSON.parse(event.data)
-
-    if (data.nodeId === nodeId) {
-      update(data.payload)
-    }
-  })
-
-  return {
-    dispatch (value) {
-      const message = {
-        nodeId: nodeId,
-        payload: value
-      }
-
-      return fetch(new URL('/uimaker-input', host).href, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(message)
+    const update = value => {
+      listeners.forEach(listener => {
+        listener(value)
       })
-    },
-    subscribe (listener) {
-      listeners.push(listener)
-      const unsubscribe = () => {
-        listeners = listeners.filter(l => l !== listener)
-      }
+    }
 
-      return unsubscribe
+    es.addEventListener('init', event => {
+      if (!(event instanceof MessageEvent)) return
+
+      const data = JSON.parse(event.data)
+      if (data[identifier]) {
+        update(data[identifier])
+      }
+    })
+
+    es.addEventListener('update', event => {
+      if (!(event instanceof MessageEvent)) return
+
+      const data = JSON.parse(event.data)
+
+      if (data.identifier === identifier) {
+        update(data.payload)
+      }
+    })
+
+    return {
+      /**
+       *
+       * @param value A value to send back to Node-RED. This value will be outputed to the output node that match the identifier
+       */
+      dispatch (value) {
+        const message = {
+          identifier: identifier,
+          payload: value
+        }
+
+        return fetch(new URL('/uimaker-input', host).href, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(message)
+        })
+      },
+      /**
+       *
+       * @param listener A function that will be called every time the node receive an input. The argument is the value
+       */
+      subscribe (listener) {
+        listeners.push(listener)
+        const unsubscribe = () => {
+          listeners = listeners.filter(l => l !== listener)
+        }
+
+        return unsubscribe
+      }
     }
   }
+
+  return createNode
 }

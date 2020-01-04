@@ -19,7 +19,7 @@
 
 • **dispatch**: *function*
 
-*Defined in [uimaker.ts:2](https://github.com/yadomi/node-red-contrib-uimaker/blob/8a18795/client/src/uimaker.ts#L2)*
+*Defined in [uimaker.ts:2](https://github.com/yadomi/node-red-contrib-uimaker/blob/431be5f/client/src/uimaker.ts#L2)*
 
 #### Type declaration:
 
@@ -37,7 +37,7 @@ ___
 
 • **subscribe**: *function*
 
-*Defined in [uimaker.ts:3](https://github.com/yadomi/node-red-contrib-uimaker/blob/8a18795/client/src/uimaker.ts#L3)*
+*Defined in [uimaker.ts:3](https://github.com/yadomi/node-red-contrib-uimaker/blob/431be5f/client/src/uimaker.ts#L3)*
 
 #### Type declaration:
 

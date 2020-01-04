@@ -14,7 +14,7 @@
 
 ▸ **useNode**(`node`: [Node](../interfaces/_uimaker_.node.md)): *any[]*
 
-*Defined in [with-react.tsx:4](https://github.com/yadomi/node-red-contrib-uimaker/blob/8a18795/client/src/with-react.tsx#L4)*
+*Defined in [with-react.tsx:4](https://github.com/yadomi/node-red-contrib-uimaker/blob/431be5f/client/src/with-react.tsx#L4)*
 
 **Parameters:**
 
