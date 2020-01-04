@@ -1,8 +1,6 @@
 import { Red, NodeProperties, Node } from 'node-red'
 import { ISseHubResponse } from '@toverux/expresse'
 
-const path = require('path')
-const serve = require('serve-static')
 const { Hub, sseHub } = require('@toverux/expresse')
 const EventEmitter = require('events')
 
@@ -32,9 +30,6 @@ const node = (RED: Red) => {
   
   return function (this: CustomNode, config: Properties) {
     RED.nodes.createNode(this, config)
-
-    RED.httpNode.use(config.path, serve(path.resolve(__dirname, '../../../public')))
-    RED.httpNode.use(path.join(config.path, 'dist'), serve(path.resolve(__dirname, '../../../dist')))
     
     this.emitter = emitter;
     this.update = (nodeId, value) => {
