@@ -2,6 +2,12 @@
 
 This is the frontend library to use in conjonction with [`node-red-contrib-uimaker`](https://github.com/yadomi/node-red-contrib-uimaker).
 
+## Installation
+
+```
+yarn add contrib-uimaker
+```
+
 ## Usage
 
 ### Directly
@@ -40,3 +46,5 @@ const MyComponent = () => {
     </div>
 }
 ```
+
+## [Documentation](./docs)

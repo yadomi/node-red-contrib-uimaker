@@ -6,13 +6,18 @@
   "scripts": {
     "dev": "$(yarn bin)/rollup -c rollup.config.js --watch"
   },
-  "files": ["./uimaker.js", "./react.js"],
+  "files": [
+    "./uimaker.js",
+    "./react.js"
+  ],
   "devDependencies": {
     "@rollup/plugin-typescript": "^2.0.1",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
     "rollup": "^1.27.14",
     "tslib": "^1.10.0",
+    "typedoc": "^0.15.6",
+    "typedoc-plugin-markdown": "^2.2.14",
     "typescript": "^3.7.4"
   }
 }
