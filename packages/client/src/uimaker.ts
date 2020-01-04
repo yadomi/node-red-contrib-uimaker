@@ -1,6 +1,5 @@
-export default function createNode (nodeId: string) {
-  const es = new EventSource('/uimaker-stream')
-  console.log({ es })
+export function createNode (nodeId: string) {
+  const es = new EventSource('http://127.0.0.1:1880/uimaker-stream')
   let listeners: Function[] = []
 
   es.onerror = err => console.log({ err })
@@ -15,7 +14,9 @@ export default function createNode (nodeId: string) {
     if (!(event instanceof MessageEvent)) return
 
     const data = JSON.parse(event.data)
-    update(data[nodeId])
+    if (data[nodeId]) {
+      update(data[nodeId])
+    }
   })
 
   es.addEventListener('update', event => {
@@ -53,5 +54,3 @@ export default function createNode (nodeId: string) {
     }
   }
 }
-
-import './hook.tsx'

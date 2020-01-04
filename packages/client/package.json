@@ -1,0 +1,17 @@
+{
+  "name": "node-red-contrib-uimaker-client",
+  "version": "1.0.0",
+  "main": "./uimaker.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack --mode development"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^2.0.1",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "rollup": "^1.27.14",
+    "tslib": "^1.10.0",
+    "typescript": "^3.7.4"
+  }
+}

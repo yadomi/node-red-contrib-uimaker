@@ -30,10 +30,11 @@ const node = (RED: Red) => {
     res.json({ status: "ok" })
   })
   
-  
   return function (this: CustomNode, config: Properties) {
     RED.nodes.createNode(this, config)
+
     RED.httpNode.use(config.path, serve(path.resolve(__dirname, '../../../public')))
+    RED.httpNode.use(path.join(config.path, 'dist'), serve(path.resolve(__dirname, '../../../dist')))
     
     this.emitter = emitter;
     this.update = (nodeId, value) => {
