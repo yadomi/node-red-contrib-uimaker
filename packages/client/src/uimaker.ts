@@ -1,5 +1,12 @@
-export function createNode (nodeId: string) {
-  const es = new EventSource('http://127.0.0.1:1880/uimaker-stream')
+export interface Node {
+  dispatch: (value: string | number | boolean) => Promise<Response>
+  subscribe: (
+    listener: (value: string | number | boolean) => void
+  ) => () => void
+}
+
+export const configure = (host: string) => (nodeId: string): Node => {
+  const es = new EventSource(new URL('/uimaker-stream', host).href)
   let listeners: Function[] = []
 
   es.onerror = err => console.log({ err })
@@ -30,7 +37,7 @@ export function createNode (nodeId: string) {
   })
 
   return {
-    dispatch (value: unknown) {
+    dispatch (value) {
       const message = {
         nodeId: nodeId,
         payload: value
@@ -44,7 +51,7 @@ export function createNode (nodeId: string) {
         body: JSON.stringify(message)
       })
     },
-    subscribe (listener: (value: unknown) => any) {
+    subscribe (listener) {
       listeners.push(listener)
       const unsubscribe = () => {
         listeners = listeners.filter(l => l !== listener)

@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { createNode } from './uimaker'
+import { Node } from './uimaker'
 
-export function useNode(node: ReturnType<typeof createNode>) {
+export function useNode(node: Node) {
     const [value, setValue] = useState(null);
 
     useEffect(() => {
-        function onChange(value: any) {
+        function onChange(value) {
             setValue(value);
         }
 
