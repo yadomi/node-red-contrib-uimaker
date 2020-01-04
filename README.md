@@ -15,12 +15,13 @@ This is the repostory for `uimaker` for Node-RED. It's composed of two package:
 
 - `node-red-contrib-uimaker`
 
-  - [Introduction](./nodes)
-  - [Availble Nodes](./nodes#nodes)
+  - [Introduction](./nodes#node-red-contrib-uimaker)
+  - [Available `Nodes`](./nodes#nodes)
 
 - `uimaker-client`
-  - [Introduction](./client)
-  - [API](./client/docs)
+
+  - [Introduction](./client#uimaker-client)
+  - [API](./client/API.md)
 
 ## What's missing ?
 
