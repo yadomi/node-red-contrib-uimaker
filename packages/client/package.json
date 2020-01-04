@@ -1,5 +1,5 @@
 {
-  "name": "node-red-contrib-uimaker-client",
+  "name": "uimaker-client",
   "version": "1.0.0",
   "main": "./uimaker.js",
   "license": "MIT",
