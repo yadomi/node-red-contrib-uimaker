@@ -12,6 +12,7 @@ This is the repostory for `uimaker` for Node-RED. It's composed of two packages:
 - [`uimaker-client`](./client), the client library that allow you to comunicate with the nodes from Node-RED
 
 [![Demo](https://i.imgur.com/pylg5co.gif)](https://i.imgur.com/pylg5co.mp4)
+
 _Click on the image for better quality_
 
 ## Documentation
