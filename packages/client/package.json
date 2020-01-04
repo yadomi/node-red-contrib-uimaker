@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack --mode development"
   },
-  "files": ["uimaker.js", "react.js"],
+  "files": ["./uimaker.js", "./react.js"],
   "devDependencies": {
     "@rollup/plugin-typescript": "^2.0.1",
     "@types/react": "^16.9.17",
