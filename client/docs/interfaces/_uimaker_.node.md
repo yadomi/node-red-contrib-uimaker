@@ -1,4 +1,4 @@
-[uimaker-client - v1.0.0](../README.md) › [Node](node.md)
+[uimaker-client - v1.0.0](../README.md) › ["uimaker"](../modules/_uimaker_.md) › [Node](_uimaker_.node.md)
 
 # Interface: Node
 
@@ -10,8 +10,8 @@
 
 ### Properties
 
-* [dispatch](node.md#dispatch)
-* [subscribe](node.md#subscribe)
+* [dispatch](_uimaker_.node.md#dispatch)
+* [subscribe](_uimaker_.node.md#subscribe)
 
 ## Properties
 
@@ -19,7 +19,7 @@
 
 • **dispatch**: *function*
 
-*Defined in [uimaker.ts:2](https://github.com/yadomi/node-red-contrib-uimaker/blob/9ee12bb/client/src/uimaker.ts#L2)*
+*Defined in [uimaker.ts:2](https://github.com/yadomi/node-red-contrib-uimaker/blob/8a18795/client/src/uimaker.ts#L2)*
 
 #### Type declaration:
 
@@ -37,7 +37,7 @@ ___
 
 • **subscribe**: *function*
 
-*Defined in [uimaker.ts:3](https://github.com/yadomi/node-red-contrib-uimaker/blob/9ee12bb/client/src/uimaker.ts#L3)*
+*Defined in [uimaker.ts:3](https://github.com/yadomi/node-red-contrib-uimaker/blob/8a18795/client/src/uimaker.ts#L3)*
 
 #### Type declaration:
 
