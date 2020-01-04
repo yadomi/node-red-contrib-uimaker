@@ -4,7 +4,7 @@
   "main": "./uimaker.js",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack --mode development"
+    "dev": "$(yarn bin)/rollup -c rollup.config.js --watch"
   },
   "files": ["./uimaker.js", "./react.js"],
   "devDependencies": {
