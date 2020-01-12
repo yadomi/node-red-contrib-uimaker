@@ -29,7 +29,7 @@ export const configure = (host: string) => (identifier: string) => {
 
     const data = JSON.parse(event.data)
 
-    if (data.identifier === identifier) {
+    if (data.nodeId === identifier) {
       update(data.payload)
     }
   })
