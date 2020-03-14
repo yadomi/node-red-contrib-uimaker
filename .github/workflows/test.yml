@@ -1,4 +1,4 @@
-name: Tests (Client Lib)
+name: Jest
 
 on:
   push:
