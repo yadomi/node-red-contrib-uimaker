@@ -1,15 +1,14 @@
 {
-    "compilerOptions": {
-        "target": "es6",
-        "lib": [
-            "DOM"
-        ],
-        "declaration": true,
-        "moduleResolution": "node",
-        "forceConsistentCasingInFileNames": true,
-        "allowSyntheticDefaultImports": true,
-        "module": "esnext",
-        "jsx": "react",
-        "outDir": "./dist/",
-    }
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["DOM", "es2015"],
+    "declaration": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "esnext",
+    "jsx": "react",
+    "outDir": "./dist/",
+    "types": ["jest"]
+  }
 }

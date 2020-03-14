@@ -1,8 +1,13 @@
 client/**/*.js
+
 !client/rollup.config.js
+!client/jest.config.js
+!client/babel.config.js
 
 nodes/**/*.js
 
 node_modules
 .DS_Store
 ._.DS_Store
+
+coverage/
