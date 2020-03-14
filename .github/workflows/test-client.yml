@@ -1,0 +1,16 @@
+name: Tests (Client Lib)
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      working-directory: ./client
+
+    steps:
+      - uses: actions/checkout@v1
+      - run: yarn install
+        working-directory: ${{env.working-directory}}
+      - run: yarn test
+        working-directory: ${{env.working-directory}}
