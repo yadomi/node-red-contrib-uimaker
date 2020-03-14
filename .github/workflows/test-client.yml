@@ -1,6 +1,8 @@
 name: Tests (Client Lib)
 
-on: [push]
+on:
+  push:
+    branches: [master]
 
 jobs:
   build:
@@ -9,7 +11,7 @@ jobs:
       working-directory: ./client
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - run: yarn install
         working-directory: ${{env.working-directory}}
       - run: yarn test
