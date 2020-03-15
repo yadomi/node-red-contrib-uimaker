@@ -1,19 +1,19 @@
 <script type="text/javascript">
-  RED.nodes.registerType('uimaker-config', {
-    category: 'config',
-    color: '#f8a5c2',
+  RED.nodes.registerType("uimaker-config", {
+    category: "config",
+    color: "#f8a5c2",
     defaults: {
       name: { value: null }
     },
-    label: function () {
-      return this.name || 'uimaker-config'
+    label: function() {
+      return this.name || "uimaker-config";
     }
-  })
+  });
 </script>
 
 <script type="text/x-red" data-template-name="uimaker-config">
   <div class="form-row">
-      <label for="node-input-name"><i class="icon-tag"></i>Name</label>
-      <input type="text" id="node-input-name" placeholder="Name">
+      <label for="node-config-input-name"><i class="icon-tag"></i>Name</label>
+      <input type="text" id="node-config-input-name" placeholder="Name">
   </div>
 </script>
