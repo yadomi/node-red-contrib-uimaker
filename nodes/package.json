@@ -8,7 +8,8 @@
   },
   "node-red": {
     "nodes": {
-      "uimaker": "src/uimaker/uimaker.js",
+      "uimaker-input": "src/uimaker-input/uimaker-input.js",
+      "uimaker-output": "src/uimaker-output/uimaker-output.js",
       "uimaker-config": "src/uimaker-config/uimaker-config.js"
     }
   },

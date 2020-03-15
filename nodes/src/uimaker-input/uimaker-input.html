@@ -1,0 +1,51 @@
+<script type="text/javascript">
+  RED.nodes.registerType("uimaker-input", {
+    category: "ui",
+    color: "#f8a5c2",
+    icon: "font-awesome/fa-bars",
+    inputs: 1,
+    outputs: 0,
+    defaults: {
+      server: { value: null, type: "uimaker-config" },
+      identifier: { value: "MyNode" },
+      name: { value: null }
+    },
+    label: function() {
+      return this.name || this.identifier || "uimaker-output";
+    },
+    inputLabels: "Input"
+  });
+</script>
+
+<script type="text/x-red" data-template-name="uimaker-input">
+  <div class="form-row">
+      <label for="node-input-server"><i class="icon-tag"></i>Server</label>
+      <input type="text" id="node-input-server" placeholder="Server">
+  </div>
+  <div class="form-row">
+      <label for="node-input-name"><i class="icon-tag"></i>Name</label>
+      <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+  <div class="form-row">
+      <label for="node-input-identifier"><i class="icon-tag"></i>Identifier</label>
+      <input type="text" id="node-input-identifier" placeholder="Identifier">
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="uimaker-input">
+  <p>Create a node to send data to the dashboard.</p>
+
+  <h3>Input</h3>
+    <dl class="message-properties">
+        <dt>payload
+            <span class="property-type">string | number | boolean</span>
+        </dt>
+        <dd> the payload of the message to send to the dashboard.</dd>
+    </dl>
+
+  <h3>References</h3>
+  <ul>
+      <li><a>node-red-contrib-uimaker-client</a> - The client package to use with the node to create a dashboard page</li>
+      <li><a>GitHub</a> - this node github repository</li>
+  </ul>
+</script>
