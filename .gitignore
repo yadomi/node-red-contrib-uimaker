@@ -11,3 +11,8 @@ node_modules
 ._.DS_Store
 
 coverage/
+
+nodes/.node-red/*.backup
+nodes/.node-red/.config.json
+nodes/.node-red/flows_cred.json
+!nodes/.node-red/settings.js
