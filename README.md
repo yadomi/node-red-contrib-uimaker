@@ -35,3 +35,55 @@ _Click on the image for better quality_
 - Generate TS definition
 - Generate a documention with TypeDoc
 - ???
+
+## Contributing
+
+### Installation
+
+#### Nodes (Server side)
+
+1. Install the dependencies for the nodes
+
+in `nodes` directory:
+
+```
+yarn install
+```
+
+2. Start `tsc` in watch mode to compile
+
+```
+yarn dev
+```
+
+In a new terminal, add the nodes as dependencies for `node-red`:
+
+```
+yarn link
+cd .node-red
+yarn link node-red-contrib-uimaker
+```
+
+Then start `node-red`
+
+```
+$(yarn bin)/node-red --userDir .node-red
+```
+
+#### Client side
+
+1. Install the dependencies for the client library
+
+in `client` directory:
+
+```
+yarn install
+```
+
+2. Start `rollup` in watch mode for the client library
+
+in `client` directory:
+
+```
+yarn dev
+```
