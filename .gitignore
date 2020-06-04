@@ -1,10 +1,6 @@
-client/**/*.js
+client/dist
 
-!client/rollup.config.js
-!client/jest.config.js
-!client/babel.config.js
-
-nodes/**/*.js
+nodes/src/**/*.js
 
 node_modules
 .DS_Store

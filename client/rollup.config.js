@@ -1,10 +1,10 @@
-import typescript from '@rollup/plugin-typescript';
+import typescript from 'rollup-plugin-typescript2';
 
 export default [
     {
         input: './src/uimaker.ts',
         output: {
-            file: './uimaker.js',
+            file: './dist/uimaker.js',
             format: 'umd',
             name: "UIMaker"
         },
@@ -13,7 +13,7 @@ export default [
     {
         input: './src/with-react.tsx',
         output: {
-            file: './react.js',
+            file: './dist/with-react.js',
             format: 'esm',
             globals: {
                 react: 'React',

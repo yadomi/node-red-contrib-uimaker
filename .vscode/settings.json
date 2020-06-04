@@ -1,6 +1,5 @@
 {
   "files.exclude": {
-    "nodes/src/**/*.js": true,
-    "client/**/*.js": true
+    "nodes/src/**/*.js": true
   }
 }
