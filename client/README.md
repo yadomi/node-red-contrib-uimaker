@@ -16,7 +16,7 @@ yarn add uimaker-client
 
 ```js
 import { configure } from 'uimaker-client'
-const createNode = configure('https://localhost:1880')
+const createNode = configure('http://localhost:1880')
 
 const MyNode1 = createNode('my-node-1')
 
