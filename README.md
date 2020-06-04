@@ -64,10 +64,10 @@ cd .node-red
 yarn link node-red-contrib-uimaker
 ```
 
-Then start `node-red`
+Then start then build-in `node-red` preconfigured with a demo flow
 
 ```
-$(yarn bin)/node-red --userDir .node-red
+yarn node-red
 ```
 
 #### Client side

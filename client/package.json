@@ -5,13 +5,10 @@
   "main": "./dist/uimaker.js",
   "types": "./dist/uimaker.d.ts",
   "scripts": {
-    "build": "$(yarn bin)/rollup -c rollup.config.js",
+    "build": "rollup -c rollup.config.js",
     "test": "jest"
   },
-  "files": [
-    "./dist/uimaker.js",
-    "./dist/react.js"
-  ],
+  "files": ["./dist/uimaker.js", "./dist/react.js"],
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
