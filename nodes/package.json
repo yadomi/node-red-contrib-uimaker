@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "tsc -w",
+    "build": "tsc",
     "node-red": "node-red -s .node-red/settings.js -u .node-red"
   },
   "node-red": {

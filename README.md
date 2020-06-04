@@ -53,7 +53,7 @@ yarn install
 2. Start `tsc` in watch mode to compile
 
 ```
-yarn dev
+yarn build --watch
 ```
 
 In a new terminal, add the nodes as dependencies for `node-red`:
@@ -85,5 +85,5 @@ yarn install
 in `client` directory:
 
 ```
-yarn dev
+yarn build --watch
 ```
