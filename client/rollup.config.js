@@ -1,5 +1,9 @@
 import typescript from 'rollup-plugin-typescript2';
 
+const tsconfig = {
+    useTsconfigDeclarationDir: true,
+}
+
 export default [
     {
         input: './src/uimaker.ts',
@@ -8,7 +12,7 @@ export default [
             format: 'umd',
             name: "UIMaker"
         },
-        plugins: [typescript()],
+        plugins: [typescript(tsconfig)],
     },
     {
         input: './src/with-react.tsx',
@@ -21,6 +25,6 @@ export default [
             },
         },
         external: ['react', 'react-dom'],
-        plugins: [typescript()],
+        plugins: [typescript(tsconfig)],
     }    
 ]

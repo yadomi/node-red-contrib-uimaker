@@ -3,6 +3,7 @@
     "target": "es6",
     "lib": ["DOM", "es2015"],
     "declaration": true,
+    "declarationDir": "dist",
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
