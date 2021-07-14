@@ -5,6 +5,7 @@
   "main": "./dist/uimaker.js",
   "types": "./dist/uimaker.d.ts",
   "scripts": {
+    "build:watch": "yarn build --watch",
     "build": "rollup -c rollup.config.js",
     "test": "jest"
   },
