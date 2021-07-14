@@ -1,0 +1,8 @@
+src/
+.node-red/
+
+nodemon.json
+tsconfig.json
+postbuild.js
+.prettierrc
+.gitignore
