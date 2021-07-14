@@ -1,5 +1,0 @@
-{
-  "files.exclude": {
-    "nodes/src/**/*.js": true
-  }
-}

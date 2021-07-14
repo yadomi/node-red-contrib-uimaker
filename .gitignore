@@ -1,6 +1,6 @@
 client/dist
 
-nodes/src/**/*.js
+nodes/lib/
 
 node_modules
 .DS_Store
@@ -11,4 +11,5 @@ coverage/
 nodes/.node-red/*.backup
 nodes/.node-red/.config.json
 nodes/.node-red/flows_cred.json
+nodes/.node-red/.config.*.json
 !nodes/.node-red/settings.js
