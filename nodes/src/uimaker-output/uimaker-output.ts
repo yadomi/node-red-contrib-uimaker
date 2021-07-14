@@ -1,27 +1,29 @@
-import { Red, NodeProperties } from "node-red";
-import { CustomNode } from "../uimaker-config/uimaker-config";
+import { NodeInitializer, NodeConstructor, NodeDef, Node } from "node-red";
+import { CustomNode } from "../types";
 
-interface Properties extends NodeProperties {
+interface Config extends NodeDef {
   host: string;
   server: string;
   identifier: string;
 }
 
-// prettier-ignore
-const node = (RED: Red) => function (config: Properties) {
-  RED.nodes.createNode(this, config)
+const nodeInit: NodeInitializer = (RED): void => {
+  const node: NodeConstructor<Node, Config, Record<string, never>> = function (config) {
+    RED.nodes.createNode(this, config);
 
-  // @ts-ignore
-  const server: CustomNode = RED.nodes.getNode(config.server);
+    // @ts-ignore
+    const server: CustomNode = RED.nodes.getNode(config.server);
 
-  const onOutput = (data) => {
-    if (data.identifier !== config.identifier) return;
-    this.send({ payload: data.payload });
-  }
+    const onOutput = (data) => {
+      if (data.identifier !== config.identifier) return;
 
-  server.emitter.on('event', onOutput);
-}
+      this.send({ payload: data.payload });
+    };
 
-module.exports = (RED: Red) => {
-  RED.nodes.registerType("uimaker-output", node(RED));
+    server.emitter.on("event", onOutput);
+  };
+
+  RED.nodes.registerType("uimaker-output", node);
 };
+
+export = nodeInit;
