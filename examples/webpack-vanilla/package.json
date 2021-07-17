@@ -1,5 +1,4 @@
 {
-  "name": "webpack-vanilla",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -14,6 +13,6 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
-    "uimaker-client": "link:../../"
+    "@yadomi/uimaker-client": "../../client/"
   }
 }
