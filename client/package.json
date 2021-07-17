@@ -5,9 +5,7 @@
     "uimaker-client-react"
   ],
   "scripts": {
-    "build": "yarn workspaces foreach -pt run build"
-  },
-  "devDependencies": {
-    "jest": "^27.0.6"
+    "build": "yarn workspaces foreach -pt run build",
+    "test": "yarn workspaces foreach -pt run test"
   }
 }

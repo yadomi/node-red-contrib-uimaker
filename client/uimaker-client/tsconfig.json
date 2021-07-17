@@ -2,6 +2,7 @@
   "compilerOptions": {
     "declaration": true,
   },
+  "typeAcquisition": { "include": ["jest"] },
   "exclude": [
     "**/*.spec.ts"
   ]

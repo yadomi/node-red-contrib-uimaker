@@ -1,7 +1,7 @@
-import { configure } from "../uimaker";
+import { configure } from "../uimaker-client";
 
 global.EventSource = jest.fn(() => ({
-  addEventListener: jest.fn()
+  addEventListener: jest.fn(),
 }));
 
 describe("configure", () => {
@@ -26,9 +26,7 @@ describe("createNode", () => {
 
 describe("dispatch", () => {
   beforeEach(() => {
-    global.fetch = jest
-      .fn()
-      .mockImplementation((...args) => Promise.resolve(args));
+    global.fetch = jest.fn().mockImplementation((...args) => Promise.resolve(args));
   });
 
   const createNode = configure("https://localhost");
@@ -43,7 +41,7 @@ describe("dispatch", () => {
     const node = createNode("myNode1");
     const result = node.dispatch(42);
 
-    result.then(args => {
+    result.then((args) => {
       expect(args[1].method).toBe("POST");
     });
   });
@@ -52,7 +50,7 @@ describe("dispatch", () => {
     const node = createNode("myNode1");
     const result = node.dispatch(42);
 
-    result.then(args => {
+    result.then((args) => {
       expect(typeof args[1].body).toBe("string");
       expect(args[1].body).toBe('{"identifier":"myNode1","payload":42}');
     });
@@ -62,7 +60,7 @@ describe("dispatch", () => {
     const node = createNode("myNode1");
     const result = node.dispatch(42);
 
-    result.then(args => {
+    result.then((args) => {
       const body = JSON.parse(args[1].body);
       expect(body).toHaveProperty("identifier");
       expect(body.identifier).toBe("myNode1");
@@ -73,7 +71,7 @@ describe("dispatch", () => {
     const node = createNode("myNode1");
     const result = node.dispatch(42);
 
-    result.then(args => {
+    result.then((args) => {
       expect(args).toMatchSnapshot();
     });
   });
@@ -88,11 +86,11 @@ describe("subscribe", () => {
     global.EventSource.mockImplementation(() => ({
       addEventListener: (type, cb) => {
         events[type] ? events[type].push(cb) : (events[type] = [cb]);
-      }
+      },
     }));
 
     global.EventSource.call = (type, data) =>
-      global.EventSource.listeners[type].forEach(cb => {
+      global.EventSource.listeners[type].forEach((cb) => {
         const event = { type, data: JSON.stringify(data) };
         cb(event);
       });

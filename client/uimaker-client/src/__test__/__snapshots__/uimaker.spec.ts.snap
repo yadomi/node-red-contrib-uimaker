@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dispatch should match the snapshot 1`] = `
+Array [
+  "https://localhost/uimaker-input",
+  Object {
+    "body": "{\\"identifier\\":\\"myNode1\\",\\"payload\\":42}",
+    "headers": Object {
+      "Content-Type": "application/json",
+    },
+    "method": "POST",
+  },
+]
+`;
