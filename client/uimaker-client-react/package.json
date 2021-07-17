@@ -1,0 +1,22 @@
+{
+  "name": "@yadomi/uimaker-client-react",
+  "main": "./dist/uimaker-client-react.js",
+  "types": "./dist/uimaker-client-react.d.ts",
+  "version": "1.1.0",
+  "scripts": {
+    "build": "rollup -c rollup.config.js"
+  },
+  "peerDependencies": {
+    "@yadomi/uimaker-client": "*",
+    "react": "*"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.9",
+    "@yadomi/uimaker-client": "workspace:uimaker-client",
+    "react": "^17.0.2",
+    "rollup": "^2.53.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "typescript": "^4.3.5"
+  }
+}

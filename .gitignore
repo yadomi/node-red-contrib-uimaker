@@ -1,4 +1,4 @@
-client/dist
+dist/*
 
 nodes/lib/
 
@@ -13,3 +13,5 @@ nodes/.node-red/.config.json
 nodes/.node-red/flows_cred.json
 nodes/.node-red/.config.*.json
 !nodes/.node-red/settings.js
+
+yarn-error.log

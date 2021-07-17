@@ -1,0 +1,17 @@
+{
+  "name": "@yadomi/uimaker-client",
+  "main": "./dist/uimaker-client.js",
+  "types": "./dist/uimaker-client.d.ts",
+  "files": [
+    "dist/uimaker-client.js"
+  ],
+  "version": "1.1.0",
+  "scripts": {
+    "build": "rollup -c rollup.config.js"
+  },
+  "devDependencies": {
+    "rollup": "^2.53.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "typescript": "^4.3.5"
+  }
+}

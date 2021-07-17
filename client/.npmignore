@@ -1,11 +1,8 @@
 src/
 examples/
 
-API.md
-
 rollup.config.js
 jest.config.js
 babel.config.js
 
-nodemon.json
 tsconfig.json
