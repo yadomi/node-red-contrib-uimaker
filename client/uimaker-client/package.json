@@ -2,10 +2,19 @@
   "name": "@yadomi/uimaker-client",
   "main": "./dist/uimaker-client.js",
   "types": "./dist/uimaker-client.d.ts",
-  "files": [
-    "dist/uimaker-client.js"
-  ],
   "version": "1.1.0",
+  "license": "MIT",
+  "author": {
+    "email": "felix.yadomi@gmail.com",
+    "name": "Felix Yadomi"
+  },
+  "files": [
+    "dist/*"
+  ],  
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yadomi/node-red-contrib-uimaker.git"
+  },  
   "scripts": {
     "build": "rollup -c rollup.config.js"
   },
