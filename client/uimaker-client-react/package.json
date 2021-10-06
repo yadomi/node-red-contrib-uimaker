@@ -23,12 +23,12 @@
     "react": "*"
   },
   "devDependencies": {
-    "@types/react": "^17.0.14",
+    "@types/react": "^17.0.27",
     "@types/react-dom": "^17.0.9",
     "@yadomi/uimaker-client": "workspace:uimaker-client",
     "react": "^17.0.2",
-    "rollup": "^2.53.2",
+    "rollup": "^2.58.0",
     "rollup-plugin-typescript2": "^0.30.0",
-    "typescript": "^4.3.5"
+    "typescript": "^4.4.3"
   }
 }
