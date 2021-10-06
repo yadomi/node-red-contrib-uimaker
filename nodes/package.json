@@ -14,7 +14,7 @@
     "postbuild": "node postbuild.js",
     "build": "tsc --outDir lib",
     "build:watch": "nodemon -w src -e ts --exec yarn build",
-    "node-red": "node-red -s .node-red/settings.js -u .node-red"
+    "node-red": "cd .node-red && yarn node-red -s settings.js -u ."
   },
   "node-red": {
     "nodes": {
@@ -28,7 +28,6 @@
     "@types/node": "^16.10.3",
     "@types/node-red": "^1.1.1",
     "glob": "^7.2.0",
-    "node-red": "^2.0.6",
     "nodemon": "^2.0.13",
     "typescript": "^4.4.3"
   },

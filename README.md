@@ -56,17 +56,11 @@ yarn install
 yarn build:watch
 ```
 
-In a new terminal, add the nodes as dependencies for `node-red`:
+In a new terminal you can run the built-in `node-red` for easier debugging:
 
 ```
-yarn link
 cd .node-red
-yarn link node-red-contrib-uimaker
-```
-
-Then start then build-in `node-red` preconfigured with a demo flow
-
-```
+yarn install
 yarn node-red
 ```
 

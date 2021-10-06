@@ -3,5 +3,11 @@
     "description": "A Node-RED Project",
     "version": "0.0.1",
     "private": true,
-    "dependencies": {}
+    "dependencies": {
+        "@yadomi/node-red-contrib-uimaker": "^1.0.0",
+        "node-red": "^2.0.6"
+    },
+    "resolutions": {
+        "@yadomi/node-red-contrib-uimaker": "portal:../"
+    }
 }
