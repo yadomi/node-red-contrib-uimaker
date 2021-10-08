@@ -8,12 +8,12 @@
     defaults: {
       server: { value: null, type: "uimaker-config" },
       identifier: { value: "MyNode" },
-      name: { value: null }
+      name: { value: null },
     },
-    label: function() {
+    label: function () {
       return this.name || this.identifier || "uimaker-output";
     },
-    inputLabels: "Input"
+    inputLabels: "Input",
   });
 </script>
 
@@ -40,7 +40,15 @@
         <dt>payload
             <span class="property-type">string | number | boolean</span>
         </dt>
-        <dd> the payload of the message to send to the dashboard.</dd>
+        <dd>The payload of the message to send to the dashboard.</dd>
+    </dl>
+    <dl class="message-properties">
+        <dt>identifier
+            <span class="property-type">string</span>
+        </dt>
+        <dd>The identifier of the node that is used to send data on. Can be also configured in the node properties itself.
+          If both is defined, <code>msg.identifier</code> is used first.
+        </dd>
     </dl>
 
   <h3>References</h3>

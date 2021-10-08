@@ -10,6 +10,7 @@ interface Config extends NodeDef {
 interface Message {
   topic: string;
   payload: unknown;
+  identifier?: string;
 }
 
 const nodeInit: NodeInitializer = (RED): void => {
@@ -20,7 +21,7 @@ const nodeInit: NodeInitializer = (RED): void => {
     const server: CustomNode = RED.nodes.getNode(config.server);
 
     const onInput = (msg: Message) => {
-      server.update(config.identifier, msg.payload);
+      server.update(msg.identifier || config.identifier, msg.payload);
     };
 
     // @ts-ignore

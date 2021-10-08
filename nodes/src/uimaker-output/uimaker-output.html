@@ -8,12 +8,12 @@
     defaults: {
       server: { value: null, type: "uimaker-config" },
       identifier: { value: "MyNode" },
-      name: { value: null }
+      name: { value: null },
     },
-    label: function() {
+    label: function () {
       return this.name || this.identifier || "uimaker-output";
     },
-    outputLabels: "Output"
+    outputLabels: "Output",
   });
 </script>
 
@@ -36,11 +36,17 @@
   <p>Create a node to comunicate either from or to a dashboard page.</p>
 
   <h3>Output</h3>
-  <dl class="message-properties">
-    <dt>payload
-      <span class="property-type">string | number | boolean</span>
+    <dl class="message-properties">
+      <dt>payload
+        <span class="property-type">string | number | boolean</span>
       </dt>
-        <dd> a message received from the dashboard page.</dd>
+      <dd>a message received from the dashboard page.</dd>
+    </dl>
+    <dl class="message-properties">
+      <dt>identifier
+        <span class="property-type">string</span>
+      </dt>
+      <dd>the identifier defined in the node properties</dd>
     </dl>
 
   <h3>Details</h3>
