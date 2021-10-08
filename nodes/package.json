@@ -13,7 +13,7 @@
   "scripts": {
     "postbuild": "node postbuild.js",
     "build": "tsc --outDir lib",
-    "build:watch": "nodemon -w src -e ts --exec 'yarn build && yarn postbuild'",
+    "build:watch": "nodemon -w src -e ts,html --exec 'yarn build && yarn postbuild'",
     "node-red": "cd .node-red && yarn node-red -s settings.js -u ."
   },
   "node-red": {
