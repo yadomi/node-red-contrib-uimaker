@@ -11,7 +11,15 @@
       name: { value: null },
     },
     label: function () {
-      return this.name || this.identifier || "uimaker-output";
+      if (this.name) {
+        return this.name;
+      }
+
+      if (this.identifier) {
+        return `${this.identifier} (identifier)`;
+      }
+
+      return "uimaker-input";
     },
     inputLabels: "Input",
   });
