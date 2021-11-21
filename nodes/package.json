@@ -31,6 +31,9 @@
     "nodemon": "^2.0.13",
     "typescript": "^4.4.3"
   },
+  "keywords": [
+    "node-red"
+  ],
   "dependencies": {
     "@toverux/expresse": "^2.4.0"
   }
